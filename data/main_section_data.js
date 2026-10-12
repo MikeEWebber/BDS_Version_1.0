@@ -2,7 +2,7 @@
 // Array of Java-Script objects
 export const mainSections = [{
   id: "1",
-  mainSectionTitle: "Before starting", 
+  mainSectionTitle: "Before Starting", 
   mainSectionContent: "Before starting learning to drive",
   mainSectionCheckPoints: "",
   mainSectionImage: "images/icons8-information-64.png"
@@ -26,7 +26,7 @@ export const mainSections = [{
   mainSectionImage: "images/icons8-family-60.png"
 },{
   id: "5",
-  mainSectionTitle: "Are you ready for your test", 
+  mainSectionTitle: "Are you ready for your test?", 
   mainSectionContent: "How to assess if you are ready for your test.",
   mainSectionCheckPoints: "",
   mainSectionImage: "images/icons8-question-mark-50.png"

@@ -1,0 +1,9 @@
+
+
+Used a bootstrap (red) template. To get the correct shade of red I had to change all
+
+#EB6864 and 235,104,100 
+
+to 
+
+#DB0634 and 219,6,52

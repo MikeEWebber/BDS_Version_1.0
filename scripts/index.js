@@ -4,15 +4,17 @@ import {mainSections, getMainSectionEntryByID } from '../data/main_section_data.
 let dataString = ``;
 
 
+
 displayMainSections(mainSections);
+addEvents();
 
 export function displayMainSections(mainSections){
 
-  mainSections.forEach(element => {
+  mainSections.forEach(element => { 
 
     dataString = dataString  + `
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card text-white text-center bg-primary my-3 mx-5 py-3 px-5">
+        <div class="card text-white text-center bg-primary my-3 mx-5 py-3 px-5 js-show-detail" data-id=${element.id}>
           
           ${element.mainSectionTitle}
           
@@ -33,3 +35,12 @@ export function displayMainSections(mainSections){
   document.querySelector('.js-main-categories').innerHTML = dataString;
 }
 
+function addEvents(){
+    document.querySelectorAll('.js-show-detail').forEach((card) => {
+    card.addEventListener('click', () => {
+      console.log(card.dataset.id);
+        window.location.replace(`./detail.html` + `?id=${card.dataset.id}`);
+
+    })
+});
+}
