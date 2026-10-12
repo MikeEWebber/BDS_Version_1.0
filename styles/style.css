@@ -3,3 +3,15 @@
 .custom-border-red{
   border-color: red;
 }
+
+.main-section-image{
+  width: 48px;
+  
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: none;
+  border-style: none;
+  border-width: 1PX;
+  
+}

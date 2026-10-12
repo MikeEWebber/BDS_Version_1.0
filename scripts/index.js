@@ -12,7 +12,18 @@ export function displayMainSections(mainSections){
 
     dataString = dataString  + `
       <div class="col-12 col-md-6 col-xl-4">
-        ${element.mainSectionTitle}
+        <div class="card text-white text-center bg-primary my-3 mx-5 py-3 px-5">
+          
+          ${element.mainSectionTitle}
+          
+          <img class="main-section-image mx-auto" src=${element.mainSectionImage} alt="Card image cap">
+          <div class="text-white text-left">
+            ${element.mainSectionContent}
+          </div>
+          
+        </div>
+        
+        
       </div>
     `
   })
