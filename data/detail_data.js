@@ -32,3 +32,18 @@ export const detailSections = [{
   detailText: 'If you have any questions or concerns please talk to your DrIving Instructor so they can help you feel relaxed and ready for your first lesson.',
   deatilImage: "",
 }];
+
+export function detailEntriesBySection(sectionID){
+
+  let detailList = [];
+
+  detailSections.forEach(entry => {
+    if (sectionID === entry.sectionId){
+      detailList.push(entry);
+    }
+  });
+
+  return detailList;
+
+}
+
