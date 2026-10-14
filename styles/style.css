@@ -15,3 +15,31 @@
   border-width: 1PX;
   
 }
+
+.site-footer{
+  background-color: #444444;
+  color: #EEEEEE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: #DB0634;
+  border-bottom: #444444;
+  border-left: #444444;
+  border-right: #444444;
+  border-width: 5px;
+  border-style: solid;
+  margin-top: auto;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+header, footer {
+  flex-grow: 0;
+}
+main {
+  flex-grow: 1;
+}
