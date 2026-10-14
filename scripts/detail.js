@@ -20,7 +20,7 @@ function generateDetailSection(details){
     dataString = dataString + 
       ` 
         <div class="col-12">
-          <div class= "card border-primary">
+          <div class= "card border-primary mx-3 my-2">
             <div class="card-header">
               ${element.detailTitle}
             </div>
