@@ -8,7 +8,7 @@ export const mainSections = [{
   mainSectionImage: "images/icons8-information-64.png"
 },{
   id: "2",
-  mainSectionTitle: "Theory - getting started", 
+  mainSectionTitle: "Theory Test", 
   mainSectionContent: "Getting your theory started",
   mainSectionCheckPoints: "",
   mainSectionImage: "images/icons8-book-96.png"
