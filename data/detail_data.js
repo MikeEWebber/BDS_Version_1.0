@@ -230,3 +230,5 @@ export function detailEntryById(id){
 
 
 
+
+
