@@ -27,6 +27,7 @@ function generateDetailSection(item){
 
             </div>
             <div>
+            <button type="button" class="btn btn-primary js-previous" >Previous</button>
               <button type="button" class="btn btn-primary js-next" >Next</button>
             </div>
 
@@ -43,12 +44,23 @@ function generateDetailSection(item){
 function addEvents(){
     document.querySelectorAll('.js-next').forEach((button) => {
     button.addEventListener('click', () => {
-      let response = nextItemInSection(pageID);
+      let response = nextItemInSection(pageID, 1);
       if (response != "0"){
         // redirect to next page
         console.log("not zero");
         window.location.replace(`./item.html` + `?id=${response}`);
       }
     })
-});
+  });
+  document.querySelectorAll('.js-previous').forEach((button) => {
+    button.addEventListener('click', () => {
+      let response = nextItemInSection(pageID, -1);
+      if (response != "0"){
+        // redirect to next page
+        console.log("not zero");
+        window.location.replace(`./item.html` + `?id=${response}`);
+      }
+    })
+  });
+
 }

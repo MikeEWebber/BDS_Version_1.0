@@ -1,4 +1,4 @@
-import {addValueToString, subtractValueFromString} from "../utils/string-manipulation.js";
+import {addValueToString} from "../utils/string-manipulation.js";
 
 // Detail template 
 // {
@@ -230,7 +230,9 @@ export function detailEntryById(id){
   return selectedEntry
 }
 
-export function nextItemInSection(id){
+// incrementorDecrementor should be positive to move next 
+// or negative to move back.
+export function nextItemInSection(id, incrementorDecrementor){
   
   let sectionIdOfItem;
 
@@ -242,7 +244,7 @@ export function nextItemInSection(id){
   })
 
   // id of the next item
-  let nextItemID = addValueToString(id, 1);
+  let nextItemID = addValueToString(id, incrementorDecrementor);
   let nextItem;
   // NB return will not break a foreach loop
   let returnValue = "0";
