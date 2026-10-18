@@ -1,3 +1,5 @@
+import {addValueToString, subtractValueFromString} from "../utils/string-manipulation.js";
+
 // Detail template 
 // {
 //   id: "",
@@ -226,6 +228,36 @@ export function detailEntryById(id){
   });
 
   return selectedEntry
+}
+
+export function nextItemInSection(id){
+  
+  let sectionIdOfItem;
+
+  // get the section ID of the current item
+  detailSections.forEach(entry => {
+    if (id === entry.id){
+      sectionIdOfItem = entry.sectionId;
+    }
+  })
+
+  // id of the next item
+  let nextItemID = addValueToString(id, 1);
+  let nextItem;
+  // NB return will not break a foreach loop
+  let returnValue = "0";
+
+  // find next item and check if its section id matches
+  // if it does return the id 
+  detailSections.forEach(entry => {
+    if (nextItemID === entry.id){
+      if (entry.sectionId === sectionIdOfItem){
+        returnValue = entry.id;
+      }
+    } 
+  })
+
+  return returnValue;
 }
 
 
