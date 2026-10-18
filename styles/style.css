@@ -47,5 +47,6 @@ main {
 .cardindex:hover{
   transform: scale(1.05);
   transition: 0.3s;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
   cursor: pointer;
 }
