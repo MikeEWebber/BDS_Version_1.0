@@ -45,7 +45,7 @@ function addEvents(){
     document.querySelectorAll('.js-next').forEach((button) => {
     button.addEventListener('click', () => {
       let response = nextItemInSection(pageID, 1);
-      if (response != "0"){
+      if (response !== "0"){
         // redirect to next page
         console.log("not zero");
         window.location.replace(`./item.html` + `?id=${response}`);
@@ -55,7 +55,7 @@ function addEvents(){
   document.querySelectorAll('.js-previous').forEach((button) => {
     button.addEventListener('click', () => {
       let response = nextItemInSection(pageID, -1);
-      if (response != "0"){
+      if (response !== "0"){
         // redirect to next page
         console.log("not zero");
         window.location.replace(`./item.html` + `?id=${response}`);
