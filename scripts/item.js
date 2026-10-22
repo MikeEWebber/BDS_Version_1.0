@@ -23,12 +23,11 @@ function generateDetailSection(item){
             </div>
             <div class="card-body">
               ${item.detailText}
-              
-
             </div>
-            <div>
-            <button type="button" class="btn btn-primary js-previous" >Previous</button>
-              <button type="button" class="btn btn-primary js-next" >Next</button>
+
+            <div class="mx-4 my-1 text-end">
+              <button type="button" class="btn btn-primary js-previous my-3 mx-2 custom-btn-width" >Previous</button>
+              <button type="button" class="btn btn-primary js-next my-1 mx-2 custom-btn-width" >Next</button>
             </div>
 
           </div>
