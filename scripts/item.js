@@ -18,7 +18,7 @@ function generateDetailSection(item){
       ` 
         <div class="col-12">
           <div class= "card border-primary mx-3 my-2">
-            <div class="card-header">
+            <div class="card-header text-white text-left bg-primary">
               ${item.detailTitle}
             </div>
             <div class="card-body">

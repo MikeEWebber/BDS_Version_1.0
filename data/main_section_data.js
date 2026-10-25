@@ -50,3 +50,16 @@ export function getMainSectionEntryByID(id){
   return selectedEntry;
 
 }
+
+export function getMainSectionTitleByID(id){
+
+  let title;
+  
+  mainSections.forEach(entry => {
+    if (id === entry.id){
+      title = entry.mainSectionTitle;
+    }
+  });
+
+  return title;
+}
