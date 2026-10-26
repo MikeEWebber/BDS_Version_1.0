@@ -1,7 +1,9 @@
 
 import { queryParam } from "../utils/query-params.js"; 
 import { detailEntriesBySection } from "../data/detail_data.js";
-import {getMainSectionTitleByID} from "../data/main_section_data.js"
+import { getMainSectionTitleByID } from "../data/main_section_data.js"
+import { genetateTitleForDetailBreadcrumb } from "./breadcrumb.js"
+
 
 let dataString = ``;
 
@@ -10,22 +12,16 @@ let pageID = queryParam(window.location.href, 'id');
 
 // get all the detail entries in the section
 let details = detailEntriesBySection(pageID);
+
 let sectionTitle = getMainSectionTitleByID(pageID);
 
-genetateBreadcrumbTitle(sectionTitle);
+genetateTitleForDetailBreadcrumb(sectionTitle);
+
 generateDetailSection(details);
 
-function genetateBreadcrumbTitle(title){
 
-  let titleString = `${title}`;
-
-  document.querySelector('.js-section-title').innerHTML = titleString;
-}
 
 function generateDetailSection(details){
-
-  
-
 
   details.forEach(element => {
     dataString = dataString + 

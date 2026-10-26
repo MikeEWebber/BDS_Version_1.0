@@ -217,6 +217,26 @@ export function detailEntriesBySection(sectionID){
 
 }
 
+export function getDetailTitle(id){
+  let title;
+  detailSections.forEach(entry => {
+    if (id === entry.id){
+      title = entry.detailTitle;
+    }
+  });
+  return title;
+}
+
+export function getSectionId(id){
+  let sectionId;
+  detailSections.forEach(entry => {
+    if (id === entry.id){
+      sectionId = entry.sectionId
+    }
+  });
+  return sectionId;
+}
+
 export function detailEntryById(id){
   
   let selectedEntry;

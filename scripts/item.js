@@ -1,6 +1,8 @@
 
 import { queryParam } from "../utils/query-params.js"; 
 import { detailEntryById, nextItemInSection } from "../data/detail_data.js";
+import {getMainSectionTitleByID} from "../data/main_section_data.js";
+import {generateItemBreadcrumb} from "./breadcrumb.js";
 
 let dataString = ``;
 
@@ -8,6 +10,8 @@ let dataString = ``;
 let pageID = queryParam(window.location.href, 'id');
 
 let item = detailEntryById(pageID);
+
+generateItemBreadcrumb(pageID);
 
 generateDetailSection(item);
 addEvents();
