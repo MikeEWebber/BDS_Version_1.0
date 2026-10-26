@@ -51,6 +51,11 @@ main {
   cursor: pointer;
 }
 
+.customcard{
+  border-color: white;
+  border-width: 2px;
+}
+
 .custom-btn-width{
   min-width: 80px;
 }
@@ -85,4 +90,13 @@ ul.breadcrumb li a {
 ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
+}
+
+.main-index{
+  background-color: #DB0634;
+}
+
+.index-text-block{
+  background-color: white;
+
 }

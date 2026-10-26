@@ -13,8 +13,9 @@ export function displayMainSections(mainSections){
   mainSections.forEach(element => { 
 
     dataString = dataString  + `
-      <div class="col-12 col-md-6 col-xl-4">
-        <div class="card cardindex text-white text-center bg-primary my-3 mx-5 py-3 px-3 js-show-detail" data-id=${element.id}>
+      <div class="col-12 col-md-6 col-xl-4 bg-primary ">
+        
+        <div class="card cardindex text-white text-center bg-primary my-3 mx-5 py-3 px-3 js-show-detail customcard " data-id=${element.id}>
           
           ${element.mainSectionTitle}
           
