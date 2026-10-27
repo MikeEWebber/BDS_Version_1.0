@@ -15,6 +15,7 @@ generateItemBreadcrumb(pageID);
 
 generateDetailSection(item);
 addEvents();
+areButtonsActive(pageID);
 
 function generateDetailSection(item){
 
@@ -30,8 +31,8 @@ function generateDetailSection(item){
             </div>
 
             <div class="mx-4 my-1 text-end">
-              <button type="button" class="btn btn-primary js-previous my-3 mx-2 custom-btn-width" >Previous</button>
-              <button type="button" class="btn btn-primary js-next my-1 mx-2 custom-btn-width" >Next</button>
+              <button id = "itemPrevious" type="button" class="btn btn-primary js-previous my-3 mx-2 custom-btn-width" >Previous</button>
+              <button id = "itemNext"type="button" class="btn btn-primary js-next my-1 mx-2 custom-btn-width" >Next</button>
             </div>
 
           </div>
@@ -42,6 +43,20 @@ function generateDetailSection(item){
   // send the dataString to the HTML page. 
   document.querySelector('.js-item-container').innerHTML = dataString;
 
+}
+
+function areButtonsActive(pageID){
+
+  if (nextItemInSection(pageID, -1) === "0"){
+    // disable previous button
+    var element = document.getElementById("itemPrevious");
+    element.classList.add("disabled");
+  }
+  if (nextItemInSection(pageID, 1) === "0"){
+    // disable next button
+    var element = document.getElementById("itemNext");
+    element.classList.add("disabled");
+  }
 }
 
 function addEvents(){

@@ -250,6 +250,9 @@ export function detailEntryById(id){
   return selectedEntry
 }
 
+
+// Returns the id string of the next item in the section
+// id is a string - query param for page ID
 // incrementorDecrementor should be positive to move next 
 // or negative to move back.
 export function nextItemInSection(id, incrementorDecrementor){
@@ -263,23 +266,40 @@ export function nextItemInSection(id, incrementorDecrementor){
     }
   })
 
-  // id of the next item
-  let nextItemID = addValueToString(id, incrementorDecrementor);
-  let nextItem;
-  // NB return will not break a foreach loop
-  let returnValue = "0";
+  // create an array to hold all items with this section id.
+  let itemsInSection = [];
 
-  // find next item and check if its section id matches
-  // if it does return the id 
-  detailSections.forEach(entry => {
-    if (nextItemID === entry.id){
-      if (entry.sectionId === sectionIdOfItem){
-        returnValue = entry.id;
-      }
-    } 
+  detailSections.forEach(entry =>{
+    if (entry.sectionId === sectionIdOfItem){
+      itemsInSection.push(entry);
+    }
   })
 
-  return returnValue;
+  // loop through itemsInSection and find position of id
+  let position;
+  for (let i=0; i < itemsInSection.length; i++){
+    if (id === itemsInSection[i].id){
+      position = i;
+    }
+  }
+
+  // return the position of the next or previous item in the section. 
+  // or 0 if the next is not valid
+
+  let positionOfNextItem = position + incrementorDecrementor;
+
+  if (positionOfNextItem < 0 || positionOfNextItem > itemsInSection.length -1){
+    return "0";
+  } else {
+    // return the id string for the enrty at positionOfNextItem
+    for (let i=0; i < itemsInSection.length; i++){
+      if (i === positionOfNextItem){
+        return itemsInSection[i].id;
+      }
+    }
+  }
+  // catch all - should not end up here 
+  return "0";
 }
 
 
