@@ -71,6 +71,7 @@ ul.breadcrumb {
 ul.breadcrumb li {
   display: inline;
   font-size: 20px;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
