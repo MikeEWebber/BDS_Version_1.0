@@ -101,3 +101,8 @@ ul.breadcrumb li a:hover {
   background-color: white;
 
 }
+
+.detail-image{
+  margin: 30px;
+  align-items: center;
+}

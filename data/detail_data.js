@@ -13,7 +13,7 @@ export const detailSections = [{
   id: "1", 
   sectionId: "1",
   detailTitle: "Applying for your provisional driving licence", 
-  detailText: 'Get your first provisional driving licence for a car, motorbike, moped or other vehicle from DVLA online. <p> To apply you must: <ul><li>be at least 15 years and 9 months old</li> <li>be able to read a number plate from 20 metres away</li> <li>have been given permission to live in Great Britain (England, Scotland and Wales) for at least 185 days</li></ul> <p> It costs £34 when you apply online on the UK Gov website, <a href="https://www.gov.uk/apply-first-provisional-driving-licence">click here:</a><p> Here is a short tutorial on how to apply for your provisional licence: <p> <a href="https://www.youtube.com/watch?v=-TYQhElbGHo">BDS Guide: Applying for your driving licence</a>',
+  detailText: 'Get your first provisional driving licence for a car, motorbike, moped or other vehicle from DVLA online. <p> To apply you must: <ul><li>be at least 15 years and 9 months old</li> <li>be able to read a number plate from 20 metres away</li> <li>have been given permission to live in Great Britain (England, Scotland and Wales) for at least 185 days</li></ul> <p> It costs £34 when you apply online on the UK Gov website, <a href="https://www.gov.uk/apply-first-provisional-driving-licence" target="_blank">click here:</a><p> Here is a short tutorial on how to apply for your provisional licence: <p> <a href="https://www.youtube.com/watch?v=-TYQhElbGHo">BDS Guide: Applying for your driving licence</a>',
   detailImage: "",
 },{
   id: "2",
@@ -50,7 +50,7 @@ export const detailSections = [{
   sectionId: "2",
   detailTitle: "Recommended reading:", 
   detailText: 'To help with studying for your theory and your practical driving lessons, the following books are recommended: <p> The 4 books above are available as a bundle that also includes theory test flash cards and magnetic L plates for your private practice here: <p> <a href="https://www.safedrivingforlife.info/shop/the-official-dvsa-learnerparent-ready-to-pass-bundle/">The Official DVSA Learner / Parent "Ready to Pass?" Bundle</a>',
-  detailImage: "",
+  detailImage: "RecomendedReading.png",
 },{
   id: "8",
   sectionId: "2",
@@ -74,7 +74,7 @@ export const detailSections = [{
   sectionId: "3",
   detailTitle: "Get ready for your first driving lesson", 
   detailText: 'What to do before your first lesson:',
-  detailImage: "",
+  detailImage: "GetReadyForDrivingLesson.png",
 },{
   id: "12",
   sectionId: "3",

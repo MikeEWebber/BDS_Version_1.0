@@ -19,6 +19,8 @@ areButtonsActive(pageID);
 
 function generateDetailSection(item){
 
+  let imageString = renderImage();
+
   dataString = 
       ` 
         <div class="col-12">
@@ -28,6 +30,10 @@ function generateDetailSection(item){
             </div>
             <div class="card-body">
               ${item.detailText}
+            </div>
+
+            <div">
+              ${imageString};
             </div>
 
             <div class="mx-4 my-1 text-end">
@@ -43,6 +49,17 @@ function generateDetailSection(item){
   // send the dataString to the HTML page. 
   document.querySelector('.js-item-container').innerHTML = dataString;
 
+}
+
+function renderImage(){
+
+  let imageString;
+  if (item.detailImage === ""){
+    imageString = ``;
+  } else {
+    imageString = `<img class="detail-image mx-auto d-block" src="images/${item.detailImage}" width="40%" alt="${item.detailTitle} Image">`
+  }
+  return imageString;
 }
 
 function areButtonsActive(pageID){

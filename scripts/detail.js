@@ -23,7 +23,12 @@ generateDetailSection(details);
 
 function generateDetailSection(details){
 
+  
+
   details.forEach(element => {
+
+    let imageString = renderImage(element);
+
     dataString = dataString + 
       ` 
         <div class="col-12">
@@ -34,6 +39,9 @@ function generateDetailSection(details){
             <div class="card-body">
               ${element.detailText}
             </div>
+            <div">
+              ${imageString};
+            </div>
           </div>
         </div>
         
@@ -43,4 +51,15 @@ function generateDetailSection(details){
   // send the dataString to the HTML page. 
   document.querySelector('.js-detail-container').innerHTML = dataString;
 
+}
+
+function renderImage(element){
+
+  let imageString;
+  if (element.detailImage === ""){
+    imageString = ``;
+  } else {
+    imageString = `<img class="detail-image mx-auto d-block" src="images/${element.detailImage}" width="40%" alt="${element.detailTitle} Image">`
+  }
+  return imageString;
 }
