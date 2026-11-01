@@ -33,7 +33,7 @@ function generateDetailSection(item){
             </div>
 
             <div">
-              ${imageString};
+              ${imageString}
             </div>
 
             <div class="mx-4 my-1 text-end">

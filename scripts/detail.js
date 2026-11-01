@@ -40,7 +40,7 @@ function generateDetailSection(details){
               ${element.detailText}
             </div>
             <div">
-              ${imageString};
+              ${imageString}
             </div>
           </div>
         </div>

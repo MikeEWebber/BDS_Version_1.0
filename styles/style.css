@@ -106,3 +106,9 @@ ul.breadcrumb li a:hover {
   margin: 30px;
   align-items: center;
 }
+
+.instructors-image{
+  margin: 20px;
+  align-items: center;
+  width: 60%;
+}
