@@ -50,7 +50,7 @@ export const detailSections = [{
   sectionId: "2",
   detailTitle: "Recommended reading:", 
   detailText: 'To help with studying for your theory and your practical driving lessons, the following books are recommended: <p> The 4 books above are available as a bundle that also includes theory test flash cards and magnetic L plates for your private practice here: <p> <a href="https://www.safedrivingforlife.info/shop/the-official-dvsa-learnerparent-ready-to-pass-bundle/" target="_blank">The Official DVSA Learner / Parent "Ready to Pass?" Bundle</a>',
-  detailImage: "RecomendedReading.png",
+  detailImage: "RecommendedReading.jpg",
 },{
   id: "8",
   sectionId: "2",
@@ -74,7 +74,7 @@ export const detailSections = [{
   sectionId: "3",
   detailTitle: "Get ready for your first driving lesson", 
   detailText: 'What to do before your first lesson:',
-  detailImage: "GetReadyForDrivingLesson.png",
+  detailImage: "GetReadyForDrivingLesson.jpg",
 },{
   id: "12",
   sectionId: "3",
