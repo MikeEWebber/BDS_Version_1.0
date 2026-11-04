@@ -1,5 +1,6 @@
 
-import { drivingInstructors } from "../data/driving_instructors.js"; 
+import { DrivingInstructors } from "../data/driving_instructors.js"; 
+
 
 let dataString = ``;
 
@@ -8,7 +9,7 @@ addEvents();
 
 function generateInstructorList(){
 
-   drivingInstructors.forEach(element => { 
+   DrivingInstructors.forEach(element => { 
 
     dataString = dataString  + `
       <div class="col-12 col-md-4 col-xl-3">
@@ -42,7 +43,7 @@ function addEvents(){
 
     document.querySelectorAll('.js-instructor-button').forEach((button) => {
     button.addEventListener('click', () => {
-        window.location.replace(`./instructors.html` + `?id=${button.id}`);
+        window.location.replace(`./stquestions.html` + `?id=${button.id}`);
 
     });
   });

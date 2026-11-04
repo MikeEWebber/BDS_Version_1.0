@@ -1,7 +1,7 @@
 
 
 // Array of Java-Script objects
-export const drivingInstructors = [{
+export const DrivingInstructors = [{
   id: "1",
   firstName: "Dave", 
   Surname: "Watt",
