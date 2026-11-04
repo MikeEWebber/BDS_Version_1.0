@@ -8,11 +8,11 @@ export const ShowTellQuestions = [{
   mainText: "How to dip the main beam on a Hyundai i30",
   image: "",
   imageText: "",
-  link: "",
-  linkText: ""
+  link: "https://www.youtube.com/watch?v=UHpOGoGtIy4",
+  linkText: "Youtube link - Dip main beam - Hyundia i30"
 },{
   id: "1",
-  instructorID: "1", 
+  instructorID: "1",
   title: "Fog lights",
   mainText: "Where to find the fog lights on a Hyundai i30",
   image: "",
@@ -24,8 +24,8 @@ export const ShowTellQuestions = [{
   instructorID: "1", 
   title: "Oil, coolant and brake fluid",
   mainText: "Where to find the oil, coolant and brake fluid on a Hyundai i30",
-  image: "",
-  imageText: "",
+  image: "dave-engine-bay.png",
+  imageText: "Engine bay of a car - that's not Dave's i30",
   link: "",
   linkText: ""
 }, {

@@ -19,6 +19,9 @@ function generateSTQuestions(){
 
    selectedEntries.forEach(element => { 
 
+    let imageString = renderImage(element);
+    let linkString = renderLinks(element);
+
     dataString = dataString  + `
       <div class="col-12 col-md-12 col-xl-6">
         
@@ -28,7 +31,15 @@ function generateSTQuestions(){
             </div>
             <div class="card-body">
               ${element.mainText} 
+              <p>
+              <div>
+                ${imageString}
+              </div>
+              <div>
+                ${linkString}
+              </div>
             </div>
+
 
           </div>
           
@@ -37,4 +48,30 @@ function generateSTQuestions(){
       `
     });
     document.querySelector('.js-stquestions').innerHTML = dataString;
+}
+
+function renderImage(element){
+
+  let imageString;
+  if (element.image === ""){
+    imageString = ``;
+  } else {
+    imageString = 
+      `
+        <img class="detail-image mx-auto d-block" src="images/stquestions/${element.image}" width="40%" alt="${element.imageText} Image">
+        ${element.imageText}
+      `
+  }
+  return imageString;
+}
+
+function renderLinks(element){
+
+  let linkString;
+  if (element.link === ""){
+    linkString = ``;
+  } else {
+    linkString = `<a href="${element.link}" target="_blank">"${element.linkText}"</a>`
+  }
+  return linkString;
 }
