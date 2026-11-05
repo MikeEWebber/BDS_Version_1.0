@@ -1,9 +1,13 @@
 
 import { DrivingInstructors } from "../data/driving_instructors.js"; 
+import { generateInstructorBreadcrumb } from "./breadcrumb.js";
+import { queryParam } from "../utils/query-params.js"; 
 
 
 let dataString = ``;
+let itemID = queryParam(window.location.href, 'itemid'); 
 
+generateInstructorBreadcrumb(itemID);
 generateInstructorList();
 addEvents();
 
@@ -27,7 +31,7 @@ function generateInstructorList(){
             </div>
 
             <div class="mx-4 my-1 text-end">
-              <button type="button" class="btn btn-primary js-instructor-button my-1 mx-2" id=${element.id}>Go to show me tell me questions</button>
+              <button type="button" class="btn btn-primary js-instructor-button my-1 mx-2" data-instructorid=${element.id}>Go to show me tell me questions</button>
             </div>
 
           </div>
@@ -43,7 +47,7 @@ function addEvents(){
 
     document.querySelectorAll('.js-instructor-button').forEach((button) => {
     button.addEventListener('click', () => {
-        window.location.replace(`./stquestions.html` + `?id=${button.id}`);
+        window.location.replace(`./stquestions.html` + `?itemid=${itemID}&instructorid=${button.dataset.instructorid}`);
 
     });
   });

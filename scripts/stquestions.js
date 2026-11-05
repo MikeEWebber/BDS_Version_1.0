@@ -2,7 +2,7 @@ import { ShowTellQuestions, getQuestionsByInstructorId } from "../data/show_tell
 import { queryParam } from "../utils/query-params.js"; 
 
 // get the URL of current page and get the query parameter / section ID
-let instructorID = queryParam(window.location.href, 'id');
+let instructorID = queryParam(window.location.href, 'instructorid');
 
 // get the array of questions
 let selectedEntries = getQuestionsByInstructorId(instructorID);
