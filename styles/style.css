@@ -105,6 +105,12 @@ ul.breadcrumb li a:hover {
 .detail-image{
   margin: 30px;
   align-items: center;
+  width: 40%;
+}
+
+.question-image{
+  margin: 30px;
+  align-items: center;
   width: 80%;
 }
 

@@ -61,7 +61,7 @@ function renderImage(element){
   } else {
     imageString = 
       `
-        <img class="detail-image mx-auto d-block" src="images/stquestions/${element.image}" width="40%" alt="${element.imageText} Image">
+        <img class="question-image mx-auto d-block" src="images/stquestions/${element.image}" width="40%" alt="${element.imageText} Image">
         ${element.imageText}
       `
   }
