@@ -1,18 +1,21 @@
 import { ShowTellQuestions, getQuestionsByInstructorId } from "../data/show_tell_questions.js";
 import { queryParam } from "../utils/query-params.js"; 
+import { generateQuestionsBreadcrumb } from "./breadcrumb.js";
+
 
 // get the URL of current page and get the query parameter / section ID
 let instructorID = queryParam(window.location.href, 'instructorid');
+let itemId = queryParam(window.location.href, 'itemid');
 
 // get the array of questions
 let selectedEntries = getQuestionsByInstructorId(instructorID);
 
-console.log(selectedEntries);
 
 // loop through and generate the datastring
 
 let dataString = ``;
 
+generateQuestionsBreadcrumb(itemId, instructorID);
 generateSTQuestions();
 
 function generateSTQuestions(){

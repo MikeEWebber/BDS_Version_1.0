@@ -1,5 +1,6 @@
 import {getSectionId, getDetailTitle } from "../data/detail_data.js";
 import {getMainSectionTitleByID} from "../data/main_section_data.js";
+import { getFullNameFromId } from "../data/driving_instructors.js";
 
 export function genetateTitleForDetailBreadcrumb(title){
 
@@ -27,18 +28,14 @@ export function generateItemBreadcrumb(itemId){
 
 }
 
-export function generateInstructorBreadcrumb(itemId, instructorName){
-
-  // call generateItemBreadcrumb(itemId)
-
-  // add the link to item page and driver name 
-
+export function generateInstructorBreadcrumb(itemId){
 
   // use id to get the section id and section title
   let sectionID = getSectionId(itemId);
   let sectionTitle = getMainSectionTitleByID(sectionID);
   // use id to get the item title
   let itemTitle = getDetailTitle(itemId);
+  
 
   let breadcrumbString =  
     `
@@ -52,6 +49,28 @@ export function generateInstructorBreadcrumb(itemId, instructorName){
 
 
 }
+export function generateQuestionsBreadcrumb(itemId, instructorId){
+
+  // use id to get the section id and section title
+  let sectionID = getSectionId(itemId);
+  let sectionTitle = getMainSectionTitleByID(sectionID);
+  // use id to get the item title
+  let itemTitle = getDetailTitle(itemId);
+  let fullName = getFullNameFromId(instructorId)
+
+  let breadcrumbString =  
+    `
+    <li><a href="index.html">Home</a></li>
+    <li><a href="detail.html?sectionid=${sectionID}">${sectionTitle}</a></li>
+    <li><a href="item.html?itemid=${itemId}">${itemTitle}</a></li>
+    <li><a href="instructors.html?itemid=${itemId}">Instructor List</a></li>
+    <li>${fullName}</li>
+    `;
+
+  document.querySelector('.js-questions-breadcrumb').innerHTML = breadcrumbString;
+}
+
+
 
 
 

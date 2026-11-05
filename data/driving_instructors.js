@@ -30,3 +30,14 @@ export const DrivingInstructors = [{
   type: "Automatic",
   image: "Mike-Joannou.png"
 }]
+
+export function getFullNameFromId(instructorId){
+    let fullName;
+  
+    DrivingInstructors.forEach(entry => {
+      if (instructorId === entry.id){
+        fullName = entry.firstName + " " + entry.Surname
+      }
+    });
+    return fullName;
+}
