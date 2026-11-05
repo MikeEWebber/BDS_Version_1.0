@@ -7,15 +7,15 @@ import {generateItemBreadcrumb} from "./breadcrumb.js";
 let dataString = ``;
 
 // get the URL of current page and get the query parameter.
-let pageID = queryParam(window.location.href, 'id');
+let itemID = queryParam(window.location.href, 'itemid');
 
-let item = detailEntryById(pageID);
+let item = detailEntryById(itemID);
 
-generateItemBreadcrumb(pageID);
+generateItemBreadcrumb(itemID);
 
 generateDetailSection(item);
 addEvents();
-areButtonsActive(pageID);
+areButtonsActive(itemID);
 
 function generateDetailSection(item){
 
@@ -79,21 +79,21 @@ function areButtonsActive(pageID){
 function addEvents(){
     document.querySelectorAll('.js-next').forEach((button) => {
     button.addEventListener('click', () => {
-      let response = nextItemInSection(pageID, 1);
+      let response = nextItemInSection(itemID, 1);
       if (response !== "0"){
         // redirect to next page
         console.log("not zero");
-        window.location.replace(`./item.html` + `?id=${response}`);
+        window.location.replace(`./item.html` + `?itemid=${response}`);
       }
     })
   });
   document.querySelectorAll('.js-previous').forEach((button) => {
     button.addEventListener('click', () => {
-      let response = nextItemInSection(pageID, -1);
+      let response = nextItemInSection(itemID, -1);
       if (response !== "0"){
         // redirect to next page
         console.log("not zero");
-        window.location.replace(`./item.html` + `?id=${response}`);
+        window.location.replace(`./item.html` + `?itemid=${response}`);
       }
     })
   });

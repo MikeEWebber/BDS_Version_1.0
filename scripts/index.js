@@ -15,7 +15,7 @@ export function displayMainSections(mainSections){
     dataString = dataString  + `
       <div class="col-12 col-md-6 col-xl-4 bg-primary ">
         
-        <div class="card cardindex text-white text-center bg-primary my-3 mx-5 py-3 px-3 js-show-detail customcard " data-id=${element.id}>
+        <div class="card cardindex text-white text-center bg-primary my-3 mx-5 py-3 px-3 js-show-detail customcard " data-sectionid="${element.id}">
           
           ${element.mainSectionTitle}
           
@@ -40,7 +40,7 @@ function addEvents(){
     document.querySelectorAll('.js-show-detail').forEach((card) => {
     card.addEventListener('click', () => {
       console.log(card.dataset.id);
-        window.location.replace(`./detail.html` + `?id=${card.dataset.id}`);
+        window.location.replace(`./detail.html` + `?sectionid=${card.dataset.sectionid}`);
 
     })
 });

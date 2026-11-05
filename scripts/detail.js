@@ -8,12 +8,12 @@ import { genetateTitleForDetailBreadcrumb } from "./breadcrumb.js"
 let dataString = ``;
 
 // get the URL of current page and get the query parameter / section ID
-let pageID = queryParam(window.location.href, 'id');
+let sectionID = queryParam(window.location.href, 'sectionid');
 
 // get all the detail entries in the section
-let details = detailEntriesBySection(pageID);
+let details = detailEntriesBySection(sectionID);
 
-let sectionTitle = getMainSectionTitleByID(pageID);
+let sectionTitle = getMainSectionTitleByID(sectionID);
 
 genetateTitleForDetailBreadcrumb(sectionTitle);
 

@@ -19,7 +19,7 @@ export function generateItemBreadcrumb(id){
   let breadcrumbString =  
     `
     <li><a href="index.html">Home</a></li>
-    <li><a href="detail.html?id=${sectionID}">${sectionTitle}</a></li>
+    <li><a href="detail.html?sectionid=${sectionID}">${sectionTitle}</a></li>
     <li>${itemTitle}</li>
     `;
 
