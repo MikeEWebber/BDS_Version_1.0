@@ -91,7 +91,52 @@ export const ShowTellQuestions = [{
   imageText: "",
   link: "",
   linkText: ""
-},];
+},{
+  id: "11",
+  instructorID: "3", 
+  title: "Dipped and Main Beam",
+  mainText: "How to dip the main beam on a Hyundai i30",
+  image: "",
+  imageText: "",
+  link: "https://www.youtube.com/watch?v=UHpOGoGtIy4",
+  linkText: "Youtube link - Dip main beam - Hyundia i30"
+},{
+  id: "12",
+  instructorID: "3",
+  title: "Fog lights",
+  mainText: "Where to find the fog lights on a Hyundai i30",
+  image: "",
+  imageText: "",
+  link: "",
+  linkText: ""
+},{
+  id: "13",
+  instructorID: "3", 
+  title: "Oil, coolant and brake fluid",
+  mainText: "Where to find the oil, coolant and brake fluid on a Hyundai i30",
+  image: "dave-engine-bay.png",
+  imageText: "Engine bay of a car - that's not Dave's i30",
+  link: "",
+  linkText: ""
+}, {
+  id: "4",
+  instructorID: "1", 
+  title: "Wash front and rear windscreens",
+  mainText: "How to wash the windows on a Hyundai i30",
+  image: "",
+  imageText: "",
+  link: "",
+  linkText: ""
+},{
+  id: "5",
+  instructorID: "1", 
+  title: "Front and rear demisters",
+  mainText: "How to turn on the front and rear demisters in a Hyundai i30",
+  image: "",
+  imageText: "",
+  link: "",
+  linkText: ""
+}];
 
 export function getQuestionsByInstructorId(instructorID){
 
