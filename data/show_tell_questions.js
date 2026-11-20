@@ -119,8 +119,8 @@ export const ShowTellQuestions = [{
   link: "",
   linkText: ""
 }, {
-  id: "4",
-  instructorID: "1", 
+  id: "14",
+  instructorID: "3", 
   title: "Wash front and rear windscreens",
   mainText: "How to wash the windows on a Hyundai i30",
   image: "",
@@ -128,8 +128,8 @@ export const ShowTellQuestions = [{
   link: "",
   linkText: ""
 },{
-  id: "5",
-  instructorID: "1", 
+  id: "15",
+  instructorID: "3", 
   title: "Front and rear demisters",
   mainText: "How to turn on the front and rear demisters in a Hyundai i30",
   image: "",
